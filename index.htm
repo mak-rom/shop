@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Магазин</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="https://shop4test.intermir.ru/sender.php" method="get" name="form">
+            <input type="text"  name="name" id="name" class="field" value="логин" required>
+            <input type="password"  name="password" id="password" class="field" value="1234567" required>
+            <input type="hidden" name="cart" value="">
+            <input type="button" value="Войти">
+        </form>
+
+        <div id="cart-background-window">
+            <div id="cart-window">
+                <div id="cart-window-header">
+                    <img src="img/close.png" width="40px" class="cart-window-close">
+                </div>
+                <div id="cart-window-content">
+                    <div id="cart-clear-message">
+                        Ваша корзина пуста!
+                    </div>
+                    <table id="cart-table">
+                    </table>
+                    <div id="cart-total-sum">
+                        Итоговая сумма: <span></span> р.
+                    </div>
+                </div>
+                <div id="cart-window-footer">
+                    <button class="cart-window-buttons cart-window-close">Закрыть корзину</button>
+                    <button class="cart-window-buttons" id="cart-clear">Очистить корзину</button>
+                    <button class="cart-window-buttons" id="buy-button">Купить</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="menu">
+            <div>
+                <h2>Каталог товаров</h2>
+            </div>
+            <div>
+                <img src="img/cart.png" width="50px" id="cart">
+            </div>
+        </div>
+        
+        <div id="timer">
+            <div class="round-rect">
+                Дни
+                <div id="days">
+                    0
+                </div>
+            </div>
+            <div class="round-rect">
+                Часы
+                <div id="hours">
+                    0
+                </div>
+            </div>
+            <div class="round-rect">
+                Минуты
+                <div id="minutes">
+                    0
+                </div>
+            </div>
+            <div class="round-rect">
+                Секунды
+                <div id="seconds">
+                    0
+                </div>
+            </div>
+        </div>
+
+        <div style="min-height: 800px;
+                    background-image: url('img/aston.jpg'); background-repeat: no-repeat;
+                    background-size: cover; margin-bottom:45px;">
+        <p class = "hello">Приветствуем вас в нашем магазине!</p>
+        </div>
+
+        <section class="catalogue">
+            <div class="card card-left" id="card-1" data-id="1">
+                <h3>Название товара 1</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Объем двигателя:5 л.</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card" data-id="2">
+                <h3>Название товара 2</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">2000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card card-right" data-id="3">
+                <h3>Название товара 3</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">500</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+
+            <div class="card card-left" data-id="4">
+                <h3>Название товара 1</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Объем двигателя:5 л.</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card" data-id="5">
+                <h3>Название товара 2</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card card-right" data-id="6">
+                <h3>Название товара 3</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+                
+            <div class="card card-left" data-id="7">
+                <h3>Название товара 1</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Объем двигателя:5 л.</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card" data-id="8">
+                <h3>Название товара 2</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+
+            <div class="card card-right" data-id="9">
+                <h3>Название товара 3</h3>
+                <img src="img/1.jpg">
+                <p>Описание товара</p>
+                <ul>
+                    <li>Характеристика1</li>
+                    <li>Характеристика2</li>
+                </ul>
+                <div>
+                    Цена: <span class="price">1000</span> р.
+                </div>
+                <button class="btn-item">Добавить</button>
+            </div>
+            
+
+        </section>
+        
+        
+        
+        <table id="basket"></table>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
